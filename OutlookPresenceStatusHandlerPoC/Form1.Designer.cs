@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.Webex = new System.Windows.Forms.Panel();
+            this.SkypeButton = new System.Windows.Forms.RadioButton();
+            this.WebexButton = new System.Windows.Forms.RadioButton();
             this.activateProvider = new System.Windows.Forms.Button();
             this.Intro = new System.Windows.Forms.Label();
-            this.WebexButton = new System.Windows.Forms.RadioButton();
-            this.SkypeButton = new System.Windows.Forms.RadioButton();
             this.Webex.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,26 +45,18 @@
             this.Webex.Size = new System.Drawing.Size(504, 255);
             this.Webex.TabIndex = 1;
             // 
-            // activateProvider
+            // SkypeButton
             // 
-            this.activateProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activateProvider.Location = new System.Drawing.Point(288, 392);
-            this.activateProvider.Name = "activateProvider";
-            this.activateProvider.Size = new System.Drawing.Size(156, 46);
-            this.activateProvider.TabIndex = 2;
-            this.activateProvider.Text = "Aktivieren";
-            this.activateProvider.UseVisualStyleBackColor = true;
-            this.activateProvider.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // Intro
-            // 
-            this.Intro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intro.Location = new System.Drawing.Point(12, 13);
-            this.Intro.Name = "Intro";
-            this.Intro.Size = new System.Drawing.Size(776, 68);
-            this.Intro.TabIndex = 3;
-            this.Intro.Text = "Wählen Sie den gewünschten Anbieter für die Outlook-Statusanzeige aus und klicken" +
-    " Sie anschließend auf \"Aktivieren\"";
+            this.SkypeButton.AutoSize = true;
+            this.SkypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SkypeButton.Location = new System.Drawing.Point(205, 49);
+            this.SkypeButton.Name = "SkypeButton";
+            this.SkypeButton.Size = new System.Drawing.Size(80, 28);
+            this.SkypeButton.TabIndex = 1;
+            this.SkypeButton.TabStop = true;
+            this.SkypeButton.Text = "Skype";
+            this.SkypeButton.UseVisualStyleBackColor = true;
+            this.SkypeButton.CheckedChanged += new System.EventHandler(this.SkypeButton_CheckedChanged);
             // 
             // WebexButton
             // 
@@ -77,18 +69,28 @@
             this.WebexButton.TabStop = true;
             this.WebexButton.Text = "Webex";
             this.WebexButton.UseVisualStyleBackColor = true;
+            this.WebexButton.CheckedChanged += new System.EventHandler(this.WebexButton_CheckedChanged);
             // 
-            // SkypeButton
+            // activateProvider
             // 
-            this.SkypeButton.AutoSize = true;
-            this.SkypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SkypeButton.Location = new System.Drawing.Point(205, 49);
-            this.SkypeButton.Name = "SkypeButton";
-            this.SkypeButton.Size = new System.Drawing.Size(80, 28);
-            this.SkypeButton.TabIndex = 1;
-            this.SkypeButton.TabStop = true;
-            this.SkypeButton.Text = "Skype";
-            this.SkypeButton.UseVisualStyleBackColor = true;
+            this.activateProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activateProvider.Location = new System.Drawing.Point(288, 392);
+            this.activateProvider.Name = "activateProvider";
+            this.activateProvider.Size = new System.Drawing.Size(156, 46);
+            this.activateProvider.TabIndex = 2;
+            this.activateProvider.Text = "Aktivieren";
+            this.activateProvider.UseVisualStyleBackColor = true;
+            this.activateProvider.Click += new System.EventHandler(this.activateButton_Click);
+            // 
+            // Intro
+            // 
+            this.Intro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intro.Location = new System.Drawing.Point(12, 13);
+            this.Intro.Name = "Intro";
+            this.Intro.Size = new System.Drawing.Size(776, 68);
+            this.Intro.TabIndex = 3;
+            this.Intro.Text = "Wählen Sie den gewünschten Anbieter für die Outlook-Statusanzeige aus und klicken" +
+    " Sie anschließend auf \"Aktivieren\"";
             // 
             // Form1
             // 
@@ -108,10 +110,10 @@
 
         #endregion
         private System.Windows.Forms.Panel Webex;
-        private System.Windows.Forms.Button activateProvider;
         private System.Windows.Forms.Label Intro;
         private System.Windows.Forms.RadioButton SkypeButton;
         private System.Windows.Forms.RadioButton WebexButton;
+        private System.Windows.Forms.Button activateProvider;
     }
 }
 
